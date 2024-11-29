@@ -1,0 +1,241 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #6a040f;
+}
+
+/* Banner com efeito */
+
+#mcdonalds{
+  display: flex;
+  height: 20vh;
+}
+
+a{
+  color: white;
+  font-style: none;
+}
+
+#logomc{
+  height: 150px;
+  width: 150px;
+  margin-left: 10%;
+  margin-top: 1%;
+  padding: 10px;
+}
+
+#teto{
+  font-size: 25px;
+  margin-top: 4%;
+  gap: 20px;
+  margin-left: 6%;
+  display: flex;
+}
+
+#fotodoapp{
+  margin-left: 45%;
+  display: flex;
+  gap: 10px;
+}
+
+#imagemfoda{
+  height: 50px;
+  width: 50px;
+}
+
+#baixe{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+#fotozika{
+  display: flex;
+  gap: 10px;
+}
+
+#imagem2{
+  height: 90px;
+  width: 90px;
+}
+
+.banner {
+  position: relative;
+  height: 80vh;
+  background: url('https://marcaspelomundo.com.br/wp-content/uploads/2024/11/DIVULGACAO_IVETE_FOTO_1.png') no-repeat center center/cover;
+  background-size: cover;
+  background-attachment: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Lanche */
+
+.lanche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  text-align: center;
+  background-color: #6a040f;
+}
+
+.fotolanche{
+  height: 30px;
+  width: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.cupons {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Seção do formulário */
+.form-section {
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: center;
+  background-color: #6a040f;
+}
+
+.form-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: white;  /* Cor McDonald's vermelho */
+}
+
+.promo-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-form label {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.promo-form input, .promo-form select {
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.promo-form button {
+  padding: 0.7rem;
+  border: none;
+  background: #fbc02d;  /* Cor McDonald's amarelo */
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.promo-form button:hover {
+  background: #f57f17;  /* Cor McDonald's amarelo escuro */
+}
+
+/* Responsividade */
+/* A partir de telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+  /* Torna o banner menor para telas pequenas */
+  .banner {
+    height: 40vh;
+  }
+
+  .banner-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  /* Ajusta o formulário */
+  .promo-form {
+    width: 90%;
+  }
+
+  .promo-form button {
+    font-size: 0.9rem;
+  }
+}
